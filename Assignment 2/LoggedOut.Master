@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoggedOut.master.cs" Inherits="Assignment_2.LoggedOut" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="normalize.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/octicons/2.4.1/octicons.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+     <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+              <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="landing.aspx">Fit and Fun</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="landing.aspx">Home</a></li>
+      </ul>
+     <!-- Right side of the nav bar. -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.aspx">Login</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <footer>
+        <div class="footer_content">
+            <p>Created and Designed by: <a href="http://matthewthoms.com/" title="Outbound link to Matthew Thoms Web Design.">Matthew Thoms Web Design</a> and <a href="http://kramerdesign.ca/" title="Outbound link to Kramer Design">Katie Kramer.</a></p>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

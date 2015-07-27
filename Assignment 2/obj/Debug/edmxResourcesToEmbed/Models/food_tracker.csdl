@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="food_trackerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="exercise">
+    <Key>
+      <PropertyRef Name="exercise_id" />
+    </Key>
+    <Property Name="exercise_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exercise_date" Type="DateTime" Precision="0" />
+    <Property Name="exercise_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="exercise_rep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK_exercise_user" FromRole="exercise" ToRole="user" />
+  </EntityType>
+  <EntityType Name="food">
+    <Key>
+      <PropertyRef Name="food_id" />
+    </Key>
+    <Property Name="food_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="food_date" Type="DateTime" Precision="0" />
+    <Property Name="food_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="food_calories" Type="Int32" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK_food_user" FromRole="food" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="exercises" Relationship="Self.FK_exercise_user" FromRole="user" ToRole="exercise" />
+    <NavigationProperty Name="foods" Relationship="Self.FK_food_user" FromRole="user" ToRole="food" />
+    <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="salt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_exercise_user">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="exercise" Type="Self.exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="exercise">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_food_user">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="food" Type="Self.food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="food">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DefaultConnection1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="exercises" EntityType="Self.exercise" />
+    <EntitySet Name="foods" EntityType="Self.food" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK_exercise_user" Association="Self.FK_exercise_user">
+      <End Role="user" EntitySet="users" />
+      <End Role="exercise" EntitySet="exercises" />
+    </AssociationSet>
+    <AssociationSet Name="FK_food_user" Association="Self.FK_food_user">
+      <End Role="user" EntitySet="users" />
+      <End Role="food" EntitySet="foods" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="food_trackerModel.sysdiagram" />
+  </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

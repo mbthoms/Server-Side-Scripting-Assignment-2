@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="food_trackerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'food_tracker.dbo.exercise' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="exercise">
+    <Key>
+      <PropertyRef Name="exercise_id" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="exercise_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="exercise_date" Type="date" Nullable="false" />
+    <Property Name="exercise_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="exercise_rep" Type="varchar" MaxLength="50" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'food_tracker.dbo.food' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="food">
+    <Key>
+      <PropertyRef Name="food_id" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="food_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="food_date" Type="date" Nullable="false" />
+    <Property Name="food_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="food_calories" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="last_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_exercise_user">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="exercise" Type="Self.exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="exercise">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_food_user">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="food" Type="Self.food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="food">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="food_trackerModelStoreContainer">
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exercise" EntityType="Self.exercise" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [exercise].[exercise_id] AS [exercise_id], 
+    [exercise].[exercise_date] AS [exercise_date], 
+    [exercise].[exercise_name] AS [exercise_name], 
+    [exercise].[exercise_rep] AS [exercise_rep], 
+    [exercise].[user_id] AS [user_id]
+    FROM [dbo].[exercise] AS [exercise]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="food" EntityType="Self.food" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [food].[food_id] AS [food_id], 
+    [food].[food_date] AS [food_date], 
+    [food].[food_name] AS [food_name], 
+    [food].[food_calories] AS [food_calories], 
+    [food].[user_id] AS [user_id]
+    FROM [dbo].[food] AS [food]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_exercise_user" Association="Self.FK_exercise_user">
+      <End Role="user" EntitySet="user" />
+      <End Role="exercise" EntitySet="exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_food_user" Association="Self.FK_food_user">
+      <End Role="user" EntitySet="user" />
+      <End Role="food" EntitySet="food" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

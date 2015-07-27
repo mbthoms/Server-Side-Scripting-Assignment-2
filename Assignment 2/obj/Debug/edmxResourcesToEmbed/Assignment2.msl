@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="food_trackerModelStoreContainer" CdmEntityContainer="food_trackerEntities">
+    <EntitySetMapping Name="exercises">
+      <EntityTypeMapping TypeName="food_trackerModel.exercise">
+        <MappingFragment StoreEntitySet="exercise">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="exercise_rep" ColumnName="exercise_rep" />
+          <ScalarProperty Name="exercise_id" ColumnName="exercise_id" />
+          <ScalarProperty Name="exercise_date" ColumnName="exercise_date" />
+          <ScalarProperty Name="exercise_name" ColumnName="exercise_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="foods">
+      <EntityTypeMapping TypeName="food_trackerModel.food">
+        <MappingFragment StoreEntitySet="food">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="food_id" ColumnName="food_id" />
+          <ScalarProperty Name="food_date" ColumnName="food_date" />
+          <ScalarProperty Name="food_name" ColumnName="food_name" />
+          <ScalarProperty Name="food_calories" ColumnName="food_calories" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="food_trackerModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
