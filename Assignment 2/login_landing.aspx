@@ -13,12 +13,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                     <h2 class="text-center">Food</h2>
                     <a href="food_tracker.aspx" title="Link to the food tracking table."><img src="img/grapes.jpeg" alt="image of man holding grapes." /></a>
                 </div>
 
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                     <h2 class="text-center">Exercise</h2>
                <a href="exercise_tracker.aspx" title="Link to the exercise tracking table."><img src="img/rawr.jpg" alt="Woman prepares for battle." /></a>
                 </div>

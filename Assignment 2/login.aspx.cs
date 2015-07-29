@@ -58,7 +58,9 @@ namespace Assignment_2
                     //check if the password that was just salted and hashed matches the password in the database.
                     if (objI.password == base64)
                     {
+                        //Checking if the password was the same, Showing a valid login.
                         //lblError.Text = "Valid Login";
+
                         //store the identity in the session object 
                         Session["user_id"] = objI.user_id;
                         Session["user_name"] = objI.first_name = " " + objI.last_name;

@@ -13,7 +13,7 @@ namespace Assignment_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //call the GetFood function to popilate the grid.
+            //call the GetFood function to populate the grid.
             if (!IsPostBack)
             {
                 GetFood();

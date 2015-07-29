@@ -13,15 +13,5 @@ namespace Assignment_2
         {
 
         }
-
-        protected void btnFood_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnExercise_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

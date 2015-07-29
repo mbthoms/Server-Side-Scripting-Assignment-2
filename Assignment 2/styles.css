@@ -6,6 +6,7 @@ body {
 img {
     width: 80%;
     border-radius: 5px;
+    align-content:center;
 }
 
 h1{

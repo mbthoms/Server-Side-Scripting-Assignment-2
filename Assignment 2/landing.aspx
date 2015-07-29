@@ -11,11 +11,8 @@
                 </div>
             </div>
             <!-- End of Row -->
-
             <div class="row">
-      
                 <div class="col-sm-12 col-md-6 col-lg-6">
-
                     <p>Bring us along on your fitness journey to increase your chances of building strength and decreasing fat.</p>
                     <fieldset class="padding_left_right_25per">
                         <h3>Sign Up Below:</h3>
@@ -57,7 +54,6 @@
                     </fieldset>
                 </div>
                 <!-- End of Col -->
-
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <img src="img/jumping.jpg" alt="Man jumps around at dusk." />
                 </div>

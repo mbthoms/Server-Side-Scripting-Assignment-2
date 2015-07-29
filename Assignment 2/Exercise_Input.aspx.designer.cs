@@ -10,25 +10,16 @@
 namespace Assignment_2 {
     
     
-    public partial class WebForm1 {
+    public partial class exercise_input {
         
         /// <summary>
-        /// lblExerciseDate control.
+        /// auth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblExerciseDate;
-        
-        /// <summary>
-        /// txtExerciseDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtExerciseDate;
+        protected global::Assignment_2.auth auth;
         
         /// <summary>
         /// lblExerciseName control.
@@ -49,13 +40,13 @@ namespace Assignment_2 {
         protected global::System.Web.UI.WebControls.TextBox txtExerciseName;
         
         /// <summary>
-        /// lblreps control.
+        /// lblExerciseReps control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblreps;
+        protected global::System.Web.UI.WebControls.Label lblExerciseReps;
         
         /// <summary>
         /// txtReps control.
@@ -65,6 +56,24 @@ namespace Assignment_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtReps;
+        
+        /// <summary>
+        /// lblDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDate;
+        
+        /// <summary>
+        /// txtExerciseDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtExerciseDate;
         
         /// <summary>
         /// btnAddExercise control.

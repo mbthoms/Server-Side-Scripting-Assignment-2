@@ -51,3 +51,23 @@ W:\Assignment 2\Part 2\Assignment 2\Assignment 2\obj\Debug\Assignment 2.pdb
 \\psf\Dropbox\Assignment 2\Assignment 2\obj\Debug\Assignment 2.csprojResolveAssemblyReference.cache
 \\psf\Dropbox\Assignment 2\Assignment 2\obj\Debug\Assignment 2.dll
 \\psf\Dropbox\Assignment 2\Assignment 2\obj\Debug\Assignment 2.pdb
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\bin\Assignment 2.dll.config
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\bin\Assignment 2.dll
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\bin\Assignment 2.pdb
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\bin\EntityFramework.dll
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\bin\EntityFramework.SqlServer.dll
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\bin\EntityFramework.xml
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\bin\EntityFramework.SqlServer.xml
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\obj\Debug\Assignment 2.csprojResolveAssemblyReference.cache
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\obj\Debug\Assignment 2.dll
+\\psf\Dropbox\Server-Side-Scripting-Assignment-2\Assignment 2\obj\Debug\Assignment 2.pdb
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\bin\Assignment 2.dll.config
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\bin\Assignment 2.dll
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\bin\Assignment 2.pdb
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\bin\EntityFramework.dll
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\bin\EntityFramework.SqlServer.dll
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\bin\EntityFramework.xml
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\bin\EntityFramework.SqlServer.xml
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\obj\Debug\Assignment 2.csprojResolveAssemblyReference.cache
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\obj\Debug\Assignment 2.dll
+\\psf\Google Drive\College Work\3rd Term\Server Side Scripting\Assignment 2\Part 2\Assignment 2\obj\Debug\Assignment 2.pdb

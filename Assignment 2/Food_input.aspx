@@ -9,7 +9,7 @@
    <div class="main_content">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <h1>Add a Food Item:</h1>
-        </div>-
+        </div>
         <!--End of column-->
 
     <fieldset class="well login_form">
